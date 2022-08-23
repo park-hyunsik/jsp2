@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="gallery">
+	<insert id="insert" parameterType="board.vo.Gallery">
+	INSERT INTO GALLERY VALUES (gal_idx_seq.nextval,#{title},sysdate,#{filenames})
+	</insert>
+	
+	<select id="selectOne" parameterType="int">
+			select * from gallery where idx =#{idx}
+	</select>
+	
+	<select id="selectAll" resultType="board.vo.Gallery">
+		select * from gallery
+	</select>
+	</mapper>

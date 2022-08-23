@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- mybatis가 데이터베이스에 연결하기 위한 설정(config)파일
+https://mybatis.org/mybatis-3/ko/getting-started.html 참고
+ -->
+<configuration>
+ 	<!--  datasource 태그 안에 4개의 프로퍼티값이 저장된 파일 : 파일 위치한 패키지이름을 디렉토리형식(/)으로 작성-->
+  <properties resource="mybatis/db.properties"/>
+  
+  <!--  db 연결정보 -->
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <!-- 데이터베이스 연결 풀 DBCP 설정 : el ${ } 기호안의 값은 properties 파일에서 읽어옵니다.-->
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <!-- JDBC로 처리하는 상당부분의 코드와 파라미터 설정 및 결과 매핑 해준다.   -->
+  <mappers>
+  	<!-- 실행할 SQL 쿼리 저장한 파일. mapper파일위치와 파일명 오류나지 않도록 확인!! 테이블컬럼과 자바객체 변수(프로퍼티) 를 바로 매핑. -->
+    <mapper resource="mybatis/bookmember.xml"/>
+    <mapper resource="mybatis/freeboard.xml"/>
+    <mapper resource="mybatis/comments.xml"/>
+    <mapper resource="mybatis/gallery.xml"/>
+    <!-- sql mapper 파일은 여러개 사용될 수 있습니다. -->
+  </mappers>
+</configuration>
+
+

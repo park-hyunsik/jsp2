@@ -1,0 +1,174 @@
+@charset "UTF-8";
+main ul {
+   list-style: none;
+   padding-inline-start:0px;
+}
+#main{
+      display:flex;
+      flex-direction:column;
+      list-style: none;
+
+   }
+.row {
+      display: flex;
+}
+.row > li{
+   padding: 3px 0px;
+   align-self: center;
+   padding : 5px;
+   margin: 2px;
+   text-align: center;
+}
+.row > li:nth-child(1){
+   flex-basis:15%;
+   background-color: #37966f;
+   color:white;
+   border-radius: 3px;
+   font-size: 0.8em;
+}   
+.row > li:nth-child(2){
+   flex-basis:40%;
+   color:#1A237E;
+   text-align: left;
+}
+.row > li:nth-child(3){
+   flex-basis:15%;
+   background-color: #37966f;
+   color:white;
+   border-radius: 3px;
+   font-size: 0.8em;
+}
+.row > li:nth-child(4){
+   flex-basis:30%;
+   color:#1A237E;
+}
+#content{
+   min-height: 40%;
+   
+}
+#content li:first-child {
+   padding: 3px;
+   border-radius: 3px;
+   border: 1px solid #37966f;
+   text-align: center;
+   font-size: 0.7em;
+   margin: 7px 0px;
+}
+#content li:nth-child(2) {
+   padding: 5px;
+   min-height: 300px;
+}
+
+.button {
+    color:#356859;
+    padding: 7px 25px;
+    text-decoration: none;  /*  밑줄제거  */
+    cursor: pointer;
+    display: inline-block;
+   text-align:center;
+   border-radius: 4px;
+   border:1px solid #356859;
+   margin : 3px;
+}
+.button:hover {
+   color : black;
+}
+
+pre{
+   font-size: 1.1em;
+   color : 1A237E;
+   padding-bottom: 10px;
+   line-height: 1.5em;
+   font-family: 맑은고딕, Malgun Gothic,sans-serif;
+}
+
+
+input,textarea {
+   padding: 7px 15px;
+   border: 1px solid #4080bf;
+   border-radius: 3px;
+}
+
+button {
+   font-size: 0.8rem;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin: 5px;
+
+}
+
+button:hover {
+   cursor: pointer;
+
+}
+
+.crow {
+   display: flex;
+   padding-top: 20px;
+}
+
+.crow > li:nth-child(1){
+   flex-basis:20%;
+   border-radius: 3px;
+   color:#1A237E;
+}   
+.crow > li:nth-child(2){
+   font-size: 0.8em;
+   flex-basis:20%;
+   color:gray;
+   text-align: left;
+}
+.crow > li:nth-child(3){
+   flex-basis:40%;
+   color:gray;
+   font-size: 0.8em;
+}
+.crow > li:nth-child(4){
+   flex-basis:20%;
+   color:#1A237E;
+}
+
+.cmtcontent {
+   font-size: 1em;
+   margin: 10px 0px 2px;
+   padding-bottom: 20px;
+   border-bottom: 1px dotted gray;
+}
+/* Modal Content/Box   , css 반영이 안되면 브라우저에서 ctrl+f5 */ 
+.modal-content {
+    background-color: #fefefe;
+    margin: 30% auto; /* 15% from the top and centered */
+    padding: 10px;
+    padding-bottom : 20px;
+   /*  border: 3px solid#4080bf; */
+    width: 30%; /* Could be more or less, depending on screen size */
+    font-size: 1.1em;
+    border-radius: 2px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 글 비밀번호 입력 모달 */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}

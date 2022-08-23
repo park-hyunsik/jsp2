@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* css 변경이 브라우저에 바로 반영이 안되면 ctrl + f5  */
+main ul {
+	list-style: none;
+}
+main ul #main{
+		display:flex;
+		flex-direction:column;
+}
+main ul .row {
+		display: flex;
+		flex-direction: row;     /* 기본값 */
+}
+.row > li{
+	padding: 3px 0px;
+}
+.row > li:nth-child(1){  /* .row 의 자식태그 중 li 그리고 그 li의 n번째 위치(자식요소)로 select  */
+	flex-basis:10%;
+}	
+.row > li:nth-child(2){
+	flex-basis:35%;
+}
+.row > li:nth-child(3){
+	flex-basis:25%;
+}
+.row > li:nth-child(4){
+	flex-basis:10%;
+}
+.row > li:nth-child(5){
+	flex-basis:20%;
+}
+
+.pagenum {
+    border: 1px solid#37966f;
+    color: #37966f;
+    padding: 3px 5px;
+    text-decoration: none;  /*  밑줄제거  */
+    cursor: pointer;
+    display: inline-block;
+	text-align:center;
+	font-size: 9pt;
+	border-radius: 2px;
+}
+.pagenum:hover{
+	  background-color:#37966f;
+	  color:white;
+	  font-weight: bold;
+} 
+
+.current {
+	background-color:gray;
+	color:white;
+}
+
+.button {
+    background-color: #37966f;
+    color:white;
+    padding: 7px 25px;
+    text-decoration: none;  /*  밑줄제거  */
+    cursor: pointer;
+    display: inline-block;
+	text-align:center;
+	border-radius: 4px;
+	border:none;
+	margin : 3px;
+}
+
+
